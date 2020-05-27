@@ -1,15 +1,6 @@
 import styled from 'styled-components';
 
-import {Theme} from './theme';
-
-interface ComponentProps{
-  readonly theme: Theme;
-}
-
-interface InputGroupProps extends ComponentProps{
-
-}
-
+import { darken } from 'polished';
 
 export const InputGroup = styled.div`
   position: relative;
@@ -28,14 +19,14 @@ export const InputGroup = styled.div`
     border-radius: 5px;
     padding: 24px 8px 8px;
     transition: 0.4s;
-    color: ${props => props.theme.mediumColor};
-    background: ${props => props.theme.lightColor};
+    color: ${props => props.theme.colors.medium};
+    background: ${props => props.theme.colors.light};
 
     &:focus {
-      border: 2px solid ${props => props.theme.darkColor};
+      border: 2px solid ${props => props.theme.colors.dark};
       box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-      background: ${props => props.theme.backgroundColor};
-      color: ${props => props.theme.darkColor};
+      background: ${props => props.theme.colors.background};
+      color: ${props => props.theme.colors.dark};
 
 
     }
@@ -45,12 +36,12 @@ export const InputGroup = styled.div`
     }
 
     &:valid{
-      color: ${props => props.theme.darkColor};
+      color: ${props => props.theme.colors.dark};
     }
 
     &:valid ~ label,
     &:focus ~ label{
-      color: ${props => props.theme.darkColor};
+      color: ${props => props.theme.colors.dark};
       font-size: 16px;
       top: 16px;
       left: 8px;
@@ -65,7 +56,7 @@ export const InputGroup = styled.div`
   label{
     z-index: 2;
     font-weight: bold;
-    color:${props => props.theme.mediumColor};
+    color:${props => props.theme.colors.medium};
     transition: 0.4s;
     position: absolute;
     transform: translateY(-50%);
@@ -76,7 +67,7 @@ export const InputGroup = styled.div`
   }
   svg {
 
-    color:${props => props.theme.mediumColor};
+    color:${props => props.theme.colors.medium};
     transition: 0.4s;
     position: absolute;
     transform: translateY(-50%);
@@ -86,15 +77,15 @@ export const InputGroup = styled.div`
 `;
 
 export const Button = styled.button`
-  color: ${props => props.theme.backgroundColor};
+  color: ${props => props.theme.colors.background};
   width: 100%;
   font-size: 20px;
   height: 60px;
   transition: 0.4s;
-  background: ${props => props.theme.primaryColor};
+  background: ${props => props.theme.colors.primary};
   border: none;
   border-radius: 5px;
-  opacity: 0.95;
+
   cursor: pointer;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
@@ -105,7 +96,7 @@ export const Button = styled.button`
   &:hover{
     box-shadow: 0 14px 28px rgba(0,0,0,0.23), 0 10px 10px rgba(0,0,0,0.20);
     transform: translateY(-4px);
-    opacity: 1;
 
+    background: ${props => darken(0.1, props.theme.colors.primary)};
   }
 `;

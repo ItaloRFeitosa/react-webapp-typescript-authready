@@ -6,7 +6,7 @@ import {MdEmail, MdVpnKey, MdArrowForward} from 'react-icons/md';
 import {Container, Content, Form } from './styles';
 import { InputGroup, Button } from '../../styles/components';
 
-const Login: React.FC = () =>
+const Login: React.FC = () =>(
   <Container>
     <Content>
       <h1>Faça Login</h1>
@@ -22,12 +22,13 @@ const Login: React.FC = () =>
           <MdVpnKey size={32}/>
         </InputGroup>
         <Button><MdArrowForward size={32}/></Button>
-        <Link to="">
+        <Link to="/register">
           Ou crie uma Conta
         </Link>
       </Form>
 
     </Content>
   </Container>
+);
 
 export default Login;

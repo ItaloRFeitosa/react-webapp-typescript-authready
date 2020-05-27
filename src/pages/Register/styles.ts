@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 
 import { fadeInUp } from '../../styles/animations';
 
@@ -23,7 +23,7 @@ export const Content = styled.div`
 
   width: 100%;
   max-width: 480px;
-  padding: 72px 48px 24px;
+  padding: 72px 48px 32px;
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 

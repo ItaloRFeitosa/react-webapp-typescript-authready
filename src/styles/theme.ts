@@ -1,20 +1,18 @@
-export interface Theme {
-  backgroundColor: string;
-  primaryColor: string;
-  darkColor: string;
-  lightColor: string;
-  mediumColor: string;
+import { DefaultTheme } from "styled-components"
+
+const light: DefaultTheme = {
+  title: 'light',
+
+  colors: {
+    background:'#F3F5F6',
+    primary:"#D52941",
+    dark:"#090B0B",
+    light:"#D1D9DB",
+    medium:"#A4B3B7"
+  }
 }
 
-const light: Theme = {
-  backgroundColor: "#ecf1f8",
-  primaryColor: "#D52941",
-  darkColor: "#0D090A",
-  lightColor: "#D4D9E0",
-  mediumColor: "#BDC1C8",
-}
-
-const dark: Theme = {
+const dark = {
   backgroundColor: "#ecf1f8",
   primaryColor: "#D52941",
   darkColor: "#0D090A",

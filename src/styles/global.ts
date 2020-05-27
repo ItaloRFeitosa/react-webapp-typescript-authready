@@ -1,11 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import { Theme } from './theme';
 
-interface GlobalProps {
-  theme: Theme;
-}
-
-const GlobalStyle = createGlobalStyle<GlobalProps>`
+const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto:200,400,500,700&display=swap');
 
   * {
@@ -17,7 +12,7 @@ const GlobalStyle = createGlobalStyle<GlobalProps>`
 
   body{
     font: 400 14px 'Roboto', sans-serif;
-    background-color: ${props => props.theme.backgroundColor};
+    background-color: ${props => props.theme.colors.background};
     -webkit-font-smoothing: antialiased;
   }
 
