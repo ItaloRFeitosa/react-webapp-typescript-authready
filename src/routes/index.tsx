@@ -2,11 +2,12 @@ import React from 'react';
 
 import AppRoutes from './app.routes';
 import AuthRoutes from './auth.routes';
+import {useAuth} from '../contexts/AuthContext';
 
 const Routes: React.FC = () => {
-  const logged = false;
+  const {isLogged} = useAuth();
 
-  return logged ? <AppRoutes/> : <AuthRoutes/>;
+  return isLogged ? <AppRoutes/> : <AuthRoutes/>;
 }
 
 export default Routes;

@@ -8,9 +8,13 @@ import {ThemeProvider} from 'styled-components';
 
 import {light, dark} from './styles/theme';
 
+import {AuthProvider} from './contexts/AuthContext';
+
 const App: React.FC = () => (
     <ThemeProvider theme={light}>
-      <Routes/>
+      <AuthProvider>
+        <Routes/>
+      </AuthProvider>
       <GlobalStyles/>
     </ThemeProvider>
   )

@@ -1,6 +1,8 @@
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 
 import { fadeInUp } from '../../styles/animations';
+
+import {darken} from 'polished';
 
 export const Container = styled.div`
   width: 100%;
@@ -62,3 +64,21 @@ export const Form = styled.div`
   }
 `;
 
+export const ErrorMsg = styled.div`
+    display: ${props => props.hidden ? 'none' : 'flex'};
+    align-items:center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: end;
+    vertical-align: middle;
+    font-weight: bold;
+    color: ${props => props.theme.colors.primary};
+    animation: ${fadeInUp} 0.2s linear;
+
+
+    p{
+      margin-left:5px;
+    }
+
+  }`;

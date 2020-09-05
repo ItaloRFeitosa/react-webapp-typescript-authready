@@ -8,7 +8,8 @@ const light: DefaultTheme = {
     primary:"#D52941",
     dark:"#090B0B",
     light:"#D1D9DB",
-    medium:"#A4B3B7"
+    medium:"#A4B3B7",
+    title:"#5A6D72"
   }
 }
 
